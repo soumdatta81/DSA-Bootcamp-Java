@@ -16,8 +16,8 @@ public class InfiniteArray {
         // condition for the target to lie in the range
         while (target > arr[end]) {
             int temp = end + 1; // this is my new start
-            // double the box value
-            // end = previous end + sizeofbox*2
+            // double the box value.
+            // end = previous end + sizeofbox*2;
             end = end + (end - start + 1) * 2;
             start = temp;
         }
@@ -27,7 +27,8 @@ public class InfiniteArray {
     static int binarySearch(int[] arr, int target, int start, int end) {
         while(start <= end) {
             // find the middle element
-//            int mid = (start + end) / 2; // might be possible that (start + end) exceeds the range of int in java
+            //int mid = (start + end) / 2; 
+            // might be possible that (start + end) exceeds the range of int in java.
             int mid = start + (end - start) / 2;
 
             if (target < arr[mid]) {
